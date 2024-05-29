@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../../../public/assets/logo/logo.png'
 import GameIcon from '../../../public/assets/icons/game-icon'
 import Image from 'next/image'
 import { PrimaryButton } from '../ui/buttons/buttons'
+import Menubar from '../../../public/assets/icons/menu-bar'
+import MenuClose from '../../../public/assets/icons/menu-close'
 const Header = () => {
+    const [Open, setOpen] = useState(false);
 
     const features = [
         'GamersXPBox',
@@ -15,21 +18,33 @@ const Header = () => {
     ]
 
     return (
-        <div className=' flex justify-between items-center py-4 px-10' >
+        <div className='z-40 relative flex justify-between items-center py-4 px-10' >
 
-            <Image className='w-[289px]' src={logo} alt='game-xp-logo' />
-            <ul className='flex gap-x-6'>
+            <div>
+                <Image className='md:w-[180px] w-[150px] lg:w-[289px]' src={logo} alt='game-xp-logo' />
+            </div>
+            <ul className='lg:flex hidden gap-x-6 '>
                 {
                     features.map((item, i) => <li className='flex flex-col justify-center items-center' key={i}>
                         <GameIcon />
 
-                        <p className='font-red-rose text-[14px] '>
+                        <p className='font-red-rose text-[10px] '>
                             {item}
                         </p>
                     </li>)
                 }
             </ul>
             <PrimaryButton>LOGIN</PrimaryButton>
+
+
+            {/* <div className='lg:hidden block '>
+                <button onClick={() => setOpen(!Open)}>
+                    {
+                        Open ? <Menubar /> : <MenuClose />
+                    }
+                </button>
+
+            </div> */}
 
         </div>
     )

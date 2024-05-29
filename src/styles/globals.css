@@ -45,3 +45,13 @@ body {
     @apply text-[18px] text-white font-red-rose leading-[27px];
   }
 }
+.custom-overflow {
+  overflow-x: hidden;
+}
+
+/* Media query for width 1527px and above (overflow visible) */
+@media (min-width: 1527px) {
+  .custom-overflow {
+    overflow-x: visible;
+  }
+}
