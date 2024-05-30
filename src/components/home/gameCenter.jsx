@@ -10,11 +10,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 // import './styles.css';
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 
 const GameCenter = () => {
 
@@ -62,8 +63,13 @@ const GameCenter = () => {
             </p>
             <div className='relative z-20  flex justify-center gap-10 py-32'>
                 <Swiper
-                    pagination={{ dynamicBullets: true }}
-                    modules={[Pagination]}
+                    pagination={{
+                        dynamicBullets: true,
+
+                    }}
+
+
+                    modules={[Pagination,]}
                     breakpoints={{
                         640: {
                             slidesPerView: 1,
@@ -78,7 +84,7 @@ const GameCenter = () => {
                             spaceBetween: 50,
                         },
                     }}
-                    className="mySwiper"
+                    className="mySwiper "
                 >
                     {sliderData.map((item, i) => (
                         <SwiperSlide key={i}>
@@ -86,11 +92,6 @@ const GameCenter = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-
-
-
-
-
 
             </div>
 
@@ -103,7 +104,7 @@ export default GameCenter
 
 
 const SliderCard = ({ data }) => {
-    return <div className='relative flex justify-between flex-col gap-5 max-w-[527px]'>
+    return <div className='relative cursor-pointer flex justify-between flex-col gap-5 max-w-[527px]'>
 
         <div className='relative'>
             <Image src={data.image} alt='main-img' className='z-40 relative' />

@@ -37,19 +37,9 @@ body {
     text-wrap: balance;
   }
   .body-text {
-    @apply text-[18px] text-white font-red-rose leading-[27px];
+    @apply text-[14px] md:text-[18px] text-white font-red-rose leading-[27px];
   }
   .custom-container {
-    @apply px-20 max-w-[1920px] mx-auto  relative z-50 py-20;
-  }
-}
-.custom-overflow {
-  overflow-x: hidden;
-}
-
-/* Media query for width 1527px and above (overflow visible) */
-@media (min-width: 1527px) {
-  .custom-overflow {
-    overflow-x: visible;
+    @apply px-4 md:px-20 max-w-[1920px] mx-auto  relative z-50 py-20;
   }
 }
