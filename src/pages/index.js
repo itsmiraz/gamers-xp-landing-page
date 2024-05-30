@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      {/* <Expertise />
-      <GameCenter />
+      <Expertise />
+      {/*<GameCenter />
       <Feature />
       <Partners /> */}
     </main>

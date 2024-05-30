@@ -27,7 +27,7 @@ const Expertise = () => {
     ]
 
     return (
-        <div className='custom-container  grid grid-cols-2 gap-20 place-items-center  '>
+        <div className='custom-container  grid grid-cols-1 md:grid-cols-2 gap-20 place-items-center  '>
 
 
             <div>
@@ -36,13 +36,13 @@ const Expertise = () => {
             <div>
                 <ul className="space-y-12">
                     {
-                        expertiseData.map((item, i) => <li className="flex gap-x-8" key={i}>
+                        expertiseData.map((item, i) => <li className="flex gap-x-6 md:gap-x-8" key={i}>
                             <div>
                                 {item.icon}
                             </div>
                             <div>
-                                <h2 className="text-[36px] font-red-hat-display font-bold  uppercase">{item.title}</h2>
-                                <p className="text-[18px] text-white/70 pt-4 font-red-rose leading-[27px]"><Balancer>
+                                <h2 className="text-[22px] md:text-[36px] font-red-hat-display font-bold  uppercase">{item.title}</h2>
+                                <p className="text-[14px] md:text-[18px] text-white/70 pt-4 font-red-rose md:leading-[27px]"><Balancer>
                                     {item.desc}</Balancer></p>
                             </div>
 
