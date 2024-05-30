@@ -57,10 +57,12 @@ const GameCenter = () => {
     return (
         <div className='custom-container relative my-20 '>
 
-            <h2 className='font-red-hat-display text-[54px] font-bold text-center uppercase'>Next-Level Gaming Center</h2>
-            <p className='text-[18px] font-red-rose text-center'>
-                Play, Earn, Own, Level Up...
-            </p>
+            <div className='relative z-20'>
+                <h2 className='font-red-hat-display text-[32px] md:text-[54px] font-bold text-center uppercase'>Next-Level Gaming Center</h2>
+                <p className='text-[14px] md:text-[18px] font-red-rose text-center'>
+                    Play, Earn, Own, Level Up...
+                </p>
+            </div>
             <div className='relative z-20  flex justify-center gap-10 py-32'>
                 <Swiper
                     pagination={{
@@ -95,7 +97,7 @@ const GameCenter = () => {
 
             </div>
 
-            <Image src={ellipsis} alt='ellipsis' className='absolute w-[915px] z-0 -top-44 opacity-20 -right-72' />
+            <Image src={ellipsis} alt='ellipsis' className='absolute md:w-[915px] md:h-[915px]  h-[800px] z-0 -top-64 md:-top-44 opacity-20 -right-40 md:-right-72' />
         </div>
     )
 }
@@ -111,7 +113,7 @@ const SliderCard = ({ data }) => {
             <Image src={cardCover} alt='card-cover' className='absolute bottom-0 z-0 left-0' />
 
         </div>
-        <div className=' px-14 space-y-4'>
+        <div className='px-4 md:px-14 space-y-4'>
             <h3 className='text-[24px] font-bold font-red-rose uppercase'>
                 {data.title}
             </h3>

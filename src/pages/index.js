@@ -9,8 +9,8 @@ export default function Home() {
     <main>
       <Hero />
       <Expertise />
-      {/*<GameCenter />
-      <Feature />
+      <GameCenter />
+      {/* <Feature />
       <Partners /> */}
     </main>
   );
