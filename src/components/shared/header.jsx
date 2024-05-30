@@ -11,14 +11,14 @@ const Header = () => {
     const features = [
         'GamersXPBox',
         'GamersXPReward',
-        'GamersXPGiveaways pass',
         'GamersXPeSports',
         'GamersXPCard',
-        'GamersXPID'
+        'GamersXPID',
+        'GamersXPGiveaways pass',
     ]
 
     return (
-        <div className='z-40 relative flex justify-between items-center py-4 px-10' >
+        <div className='z-40 relative max-w-[1920px] mx-auto flex justify-between items-center py-4 px-10' >
 
             <div>
                 <Image className='md:w-[180px] w-[150px] lg:w-[289px]' src={logo} alt='game-xp-logo' />
@@ -28,7 +28,7 @@ const Header = () => {
                     features.map((item, i) => <li className='flex flex-col justify-center items-center' key={i}>
                         <GameIcon />
 
-                        <p className='font-red-rose text-[10px] '>
+                        <p className='font-red-rose text-[14px] '>
                             {item}
                         </p>
                     </li>)

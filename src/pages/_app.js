@@ -12,9 +12,8 @@ export default function App({ Component, pageProps }) {
   console.log(width);
   return (
     <div
-      className={`mx-auto max-w-[2200px] relative transition-all duration-300 ease-in-out ${
-        width < 1920 ? "overflow-visible" : " overflow-hidden"
-      }   `}
+      className={`mx-auto relative transition-all duration-300 ease-in-out overflow-hidden
+        `}
     >
       <Header />
       <Component {...pageProps} />
