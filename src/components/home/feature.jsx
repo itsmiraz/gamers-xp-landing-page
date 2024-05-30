@@ -41,7 +41,7 @@ const Feature = () => {
                 </video>
 
             </div>
-            <Image src={ellipsis} alt='ellipsis' className='absolute w-[1000px] h-[500px] z-0 -bottom-0 md:-bottom-72 opacity-20 -left-32 md:-left-96' />
+            <Image src={ellipsis} alt='ellipsis' className='absolute w-[1000px] h-[700px] md:h-fit z-0 -bottom-0 md:-bottom-72 opacity-20 -left-32 md:-left-96' />
 
         </div>
     )
