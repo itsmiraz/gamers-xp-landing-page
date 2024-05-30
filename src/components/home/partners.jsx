@@ -12,6 +12,7 @@ import image10 from '../../../public/assets/images/partners/image-10.png'
 import image11 from '../../../public/assets/images/partners/image-11.png'
 import image12 from '../../../public/assets/images/partners/image-12.png'
 import Image from 'next/image'
+import ellipsis from '../../../public/assets/images/ellipsis.png'
 
 
 const Partners = () => {
@@ -50,12 +51,12 @@ const Partners = () => {
 
 
     return (
-        <div className="custom-container my-20 justify-center">
+        <div className="custom-container relative my-20 justify-center">
             <h2 className='text-[54px] font-bold text-center uppercase  font-red-hat-display'>
                 Collaborating with global industry experts
             </h2>
 
-            <div className="relative mb-12 mt-20 overflow-hidden whitespace-nowrap w-full">
+            <div className="relative z-50 mb-12 mt-20 overflow-hidden whitespace-nowrap w-full">
                 <motion.div
                     className="flex gap-x-20 items-center"
                     animate={{ x: ['0%', '-50%'] }}
@@ -70,7 +71,7 @@ const Partners = () => {
 
                 </motion.div>
             </div>
-            <div className="relative overflow-hidden whitespace-nowrap w-full">
+            <div className="relative z-50 overflow-hidden whitespace-nowrap w-full">
                 <motion.div
                     className="flex gap-x-20 items-center"
                     animate={{ x: ['-50%', '0%'] }}
@@ -85,6 +86,7 @@ const Partners = () => {
 
                 </motion.div>
             </div>
+            <Image src={ellipsis} alt='ellipsis' className='absolute w-[1000px] z-0 -bottom-[700px] opacity-20 -right-20' />
 
         </div>
     )

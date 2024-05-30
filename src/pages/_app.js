@@ -1,3 +1,4 @@
+import Footer from "@/components/shared/footer";
 import Header from "@/components/shared/header";
 import "@/styles/globals.css";
 import { useEffect, useState } from "react";
@@ -17,6 +18,7 @@ export default function App({ Component, pageProps }) {
     >
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </div>
   );
 }
