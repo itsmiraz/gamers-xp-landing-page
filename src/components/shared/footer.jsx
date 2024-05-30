@@ -7,10 +7,10 @@ import Linkedin from '../../../public/assets/icons/linkedin'
 
 const Footer = () => {
     return (
-        <div className='z-50 pt-12  relative max-w-[1920px] mx-auto px-20 bg-black ' >
+        <div className='z-50 pt-12  relative max-w-[1920px] mx-auto px-4 md:px-20 bg-black ' >
 
             <div className='grid grid-cols-6 gap-10'>
-                <div className='col-span-3 '>
+                <div className='col-span-6 md:col-span-3 '>
                     <Image src={logo} alt='logo' />
                     <p className=' font-red-rose text-[18px] text-white/70 mt-7'>
                         2024 © Copyrights EXP GAMING
@@ -18,9 +18,9 @@ const Footer = () => {
                         TECHNOLOGIES LTD
                     </p>
                 </div>
-                <div>
+                <div className='md:col-span-1 col-span-3'>
                     <h3 className='font-red-rose  uppercase font-bold text-[20px]'>Support</h3>
-                    <ul className='pt-12 space-y-6'>
+                    <ul className='pt-12 space-y-2 md:space-y-6'>
                         <li>
                             <p className='font-red-rose text-[18px] text-white/70'>Volutpat</p>
                         </li>
@@ -32,9 +32,9 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div className='md:col-span-1 col-span-3'>
                     <h3 className='font-red-rose uppercase font-bold text-[20px]'>legal</h3>
-                    <ul className='pt-12 space-y-6'>
+                    <ul className='pt-12 space-y-2 md:space-y-6'>
                         <li>
                             <p className='font-red-rose text-[18px] text-white/70'>Turpis</p>
                         </li>
@@ -46,9 +46,9 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div className='md:col-span-1 col-span-6'>
                     <h3 className='font-red-rose font-bold uppercase text-[20px]'>for partners</h3>
-                    <ul className='pt-12 space-y-6'>
+                    <ul className='pt-12 space-y-2 md:space-y-6'>
                         <li>
                             <p className='font-red-rose text-[18px] text-white/70'>Neque urna</p>
                         </li>
@@ -63,14 +63,14 @@ const Footer = () => {
 
             </div>
             <hr className='opacity-20 my-10' />
-            <div className='flex  pb-8 justify-between items-center'>
+            <div className='flex md:flex-row flex-col gap-4  pb-8 justify-between items-center'>
                 <div className='flex gap-x-4'>
                     <FaceBook />
                     <Twitter />
                     <Youtube />
                     <Linkedin />
                 </div>
-                <div className='flex justify-between items-center gap-x-20'>
+                <div className='flex justify-between items-center gap-x-4  md:gap-x-20'>
                     <p className='text-[18px] font-red-rose text-white/70'>Terms & Conditions</p>
                     <p className='text-[18px] font-red-rose text-white/70'> Privacy Policy</p>
                 </div>
