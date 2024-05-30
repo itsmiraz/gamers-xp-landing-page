@@ -44,6 +44,9 @@ body {
   .body-text {
     @apply text-[18px] text-white font-red-rose leading-[27px];
   }
+  .custom-container {
+    @apply px-20 max-w-[1920px] mx-auto  relative z-50 py-20;
+  }
 }
 .custom-overflow {
   overflow-x: hidden;

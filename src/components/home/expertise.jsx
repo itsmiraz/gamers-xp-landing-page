@@ -7,7 +7,7 @@ import Image from "next/image"
 
 const Expertise = () => {
 
-    const data = [
+    const expertiseData = [
         {
             icon: <GreenGameIcon />,
             title: "Your Games, Our Power",
@@ -26,7 +26,7 @@ const Expertise = () => {
     ]
 
     return (
-        <div className='px-20 max-w-[1920px] mx-auto grid grid-cols-2 gap-20 place-items-center  relative z-50 py-20'>
+        <div className='custom-container  grid grid-cols-2 gap-20 place-items-center  '>
 
 
             <div>
@@ -35,7 +35,7 @@ const Expertise = () => {
             <div>
                 <ul className="space-y-12">
                     {
-                        data.map((item, i) => <li className="flex gap-x-8" key={i}>
+                        expertiseData.map((item, i) => <li className="flex gap-x-8" key={i}>
                             <div>
                                 {item.icon}
                             </div>

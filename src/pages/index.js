@@ -1,4 +1,5 @@
 import Expertise from "@/components/home/expertise";
+import GameCenter from "@/components/home/gameCenter";
 import Hero from "@/components/home/hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <Hero />
       <Expertise />
+      <GameCenter />
     </main>
   );
 }
