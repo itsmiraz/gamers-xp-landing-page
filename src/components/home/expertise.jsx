@@ -27,7 +27,7 @@ const Expertise = () => {
     ]
 
     return (
-        <div className='custom-container  grid grid-cols-1 md:grid-cols-2 gap-20 place-items-center  '>
+        <div className='custom-container  grid grid-cols-1 lg:grid-cols-2 gap-20 place-items-center  '>
 
 
             <div>

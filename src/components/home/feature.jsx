@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const Feature = () => {
     return (
-        <div className='custom-container  relative flex md:flex-row flex-col-reverse items-center justify-between gap-10'>
+        <div className='custom-container  relative flex lg:flex-row flex-col-reverse items-center justify-between gap-10'>
 
             <div className='space-y-10 relative z-20'>
                 <h2 className='text-[32px] md:text-[54px] leading-[128%] font-red-hat-display font-bold uppercase'>

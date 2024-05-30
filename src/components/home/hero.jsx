@@ -11,7 +11,7 @@ import StarIcon from '../../../public/assets/icons/start-icon'
 const Hero = () => {
     return (
         <div className='custom-container'>
-            <div className='relative z-50 md:flex-row flex-col-reverse flex gap-10 justify-between items-center '>
+            <div className='relative  lg:flex-row flex-col-reverse flex gap-10 justify-between items-center '>
 
                 <div className='space-y-12 items-center mx-auto relative'>
                     <h1 className='font-red-hat-display text-[45px] md:text-start text-center md:text-[96px] font-bold leading-[55px] md:leading-[100px] uppercase text-white'>
@@ -24,7 +24,7 @@ const Hero = () => {
                     <div className='flex justify-center md:justify-start'>
                         <PrimaryButton>EXPLORE NOW</PrimaryButton>
                     </div>
-                    <p className='body-text text-center'>
+                    <p className='body-text  md:text-start text-center'>
                         <Balancer>
                             Connecting gamers with blockchain. Continue playing the games <br /> you love and earn real rewards!
                         </Balancer>
@@ -40,7 +40,7 @@ const Hero = () => {
 
                     </div>
                 </div>
-                <div className='w-[80%] xl:w-[50%] lg:w-[50%]'>
+                <div className='w-[80%]   relative xl:w-[50%] lg:w-[50%]'>
                     <Image src={heroImage} alt='hero-image' />
                 </div>
 
