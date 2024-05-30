@@ -11,7 +11,7 @@ import StarIcon from '../../../public/assets/icons/start-icon'
 const Hero = () => {
     return (
         <div className='custom-container'>
-            <div className='  flex justify-between items-center '>
+            <div className='relative z-50  flex justify-between items-center '>
 
                 <div className='space-y-12 relative'>
                     <h1 className='font-red-hat-display text-[96px] font-bold leading-[100px] uppercase text-white'>
@@ -43,9 +43,9 @@ const Hero = () => {
                 </div>
 
             </div>
-            <Image src={ellipsis} alt='ellipsis' className='-top-80 opacity-20 z-10 -right-80 w-[952px] absolute' />
-            <Image src={ellipsis} alt='ellipsis' className='-top-0 opacity-50 z-10 -left-80 w-[952px] absolute' />
-            <Image src={secondCharacter} alt='ellipsis' className='bottom-0  z-10 -left-52 w-[600px] absolute' />
+            <Image src={ellipsis} alt='ellipsis' className='-top-80 opacity-20 z-0 -right-80 w-[952px] absolute' />
+            <Image src={ellipsis} alt='ellipsis' className='-top-0 opacity-50 z-0 -left-80 w-[952px] absolute' />
+            <Image src={secondCharacter} alt='ellipsis' className='bottom-0  z-0 -left-52 w-[600px] absolute' />
         </div>
     )
 }
