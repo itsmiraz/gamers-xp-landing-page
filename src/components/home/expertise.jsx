@@ -4,6 +4,7 @@ import TimerIcon from "../../../public/assets/icons/timer"
 
 import expertiseImage from '../../../public/assets/images/expertise-image.webp'
 import Image from "next/image"
+import Balancer from "react-wrap-balancer"
 
 const Expertise = () => {
 
@@ -41,7 +42,8 @@ const Expertise = () => {
                             </div>
                             <div>
                                 <h2 className="text-[36px] font-red-hat-display font-bold  uppercase">{item.title}</h2>
-                                <p className="text-[18px] font-red-rose leading-[27px]">{item.desc}</p>
+                                <p className="text-[18px] text-white/70 pt-4 font-red-rose leading-[27px]"><Balancer>
+                                    {item.desc}</Balancer></p>
                             </div>
 
                         </li>)

@@ -10,8 +10,8 @@ import StarIcon from '../../../public/assets/icons/start-icon'
 
 const Hero = () => {
     return (
-        <div className='relative'>
-            <div className='custom-container  flex justify-between items-center '>
+        <div className='custom-container'>
+            <div className='  flex justify-between items-center '>
 
                 <div className='space-y-12 relative'>
                     <h1 className='font-red-hat-display text-[96px] font-bold leading-[100px] uppercase text-white'>
