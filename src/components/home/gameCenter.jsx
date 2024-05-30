@@ -3,7 +3,7 @@ import rewardDappImage from '../../../public/assets/images/reward-dapp.webp'
 import giveawayPassImage from '../../../public/assets/images/give-away-pass.webp'
 import esportImage from '../../../public/assets/images/esport-platform.webp'
 import Image from 'next/image'
-
+import ellipsis from '../../../public/assets/images/ellipsis.png'
 
 
 const GameCenter = () => {
@@ -29,17 +29,19 @@ const GameCenter = () => {
     ]
 
     return (
-        <div className='custom-container my-20 '>
+        <div className='custom-container relative my-20 '>
 
             <h2 className='font-red-hat-display text-[54px] font-bold text-center uppercase'>Next-Level Gaming Center</h2>
             <p className='text-[18px] font-red-rose text-center'>
                 Play, Earn, Own, Level Up...
             </p>
-            <div className='relative flex justify-center gap-10 py-32'>
+            <div className='relative z-20  flex justify-center gap-10 py-32'>
                 {
                     sliderData.map((item, i) => <SliderCard data={item} key={i} />)
                 }
             </div>
+
+            <Image src={ellipsis} alt='ellipsis' className='absolute w-[915px] z-0 -top-44 opacity-20 -right-72' />
         </div>
     )
 }

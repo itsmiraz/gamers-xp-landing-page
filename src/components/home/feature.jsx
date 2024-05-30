@@ -1,12 +1,14 @@
 import React from 'react'
 import GreenCheck from '../../../public/assets/icons/green-check'
 import { PrimaryButton } from '../ui/buttons/buttons'
+import ellipsis from '../../../public/assets/images/ellipsis.png'
+import Image from 'next/image'
 
 const Feature = () => {
     return (
-        <div className='custom-container  flex items-center justify-between'>
+        <div className='custom-container  relative flex items-center justify-between'>
 
-            <div className='space-y-10'>
+            <div className='space-y-10 relative z-20'>
                 <h2 className='text-[54px] leading-[128%] font-red-hat-display font-bold uppercase'>
                     Level Up Your <br /> Gaming Adventure
                 </h2>
@@ -39,6 +41,8 @@ const Feature = () => {
                 </video>
 
             </div>
+            <Image src={ellipsis} alt='ellipsis' className='absolute w-[1000px] z-0 -bottom-72 opacity-20 -left-96' />
+
         </div>
     )
 }
