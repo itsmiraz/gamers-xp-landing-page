@@ -25,10 +25,10 @@ const Header = () => {
             </div>
             <ul className={` lg:static absolute ${!Open ? "top-0" : "-top-[800px]"} left-0 px-4 md:px-10 lg:px-0 justify-start bg-black lg:bg-transparent w-full lg:w-fit ease-in-out transition-all duration-300  pt-20 lg:pt-0 pb-10 lg:pb-0 z-40  lg:flex lg:space-y-0 space-y-4  gap-x-6 `}>
                 {
-                    features.map((item, i) => <li className='flex flex-col justify-start items-start lg:justify-center lg:items-center' key={i}>
+                    features.map((item, i) => <li className='flex flex-col justify-start items-center lg:justify-center lg:items-center' key={i}>
                         <GameIcon />
 
-                        <p className='font-red-rose text-[14px] '>
+                        <p className='font-red-rose text-white text-[14px] '>
                             {item}
                         </p>
                     </li>)

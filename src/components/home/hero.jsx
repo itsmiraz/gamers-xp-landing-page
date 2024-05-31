@@ -46,7 +46,7 @@ const Hero = () => {
                         <StarIcon />
                     </div>
 
-                    <div className='w-[60px] h-[2px] bg-white'>
+                    <div className='w-[60px] md:mx-0 mx-auto h-[2px] bg-white'>
 
                     </div>
                 </motion.div>

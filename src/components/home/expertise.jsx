@@ -37,7 +37,7 @@ const Expertise = () => {
                                 {item.icon}
                             </div>
                             <div>
-                                <h2 className="text-[22px] md:text-[36px] font-red-hat-display font-bold  uppercase">{item.title}</h2>
+                                <h2 className="text-[22px] md:text-[36px] text-white font-red-hat-display font-bold  uppercase">{item.title}</h2>
                                 <p className="text-[14px] md:text-[18px] text-white/70 pt-4 font-red-rose md:leading-[27px]"><Balancer>
                                     {item.desc}</Balancer></p>
                             </div>

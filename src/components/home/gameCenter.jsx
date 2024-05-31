@@ -42,10 +42,10 @@ const GameCenter = () => {
                 variants={slideAnimation('down')}
                 className='relative z-20'
             >
-                <h2 className='font-red-hat-display text-[32px] md:text-[54px] font-bold text-center uppercase'>
+                <h2 className='font-red-hat-display text-white text-[32px] md:text-[54px] font-bold text-center uppercase'>
                     Next-Level Gaming Center
                 </h2>
-                <p className='text-[14px] md:text-[18px] font-red-rose text-center'>
+                <p className='text-[14px] md:text-[18px] text-white font-red-rose text-center'>
                     Play, Earn, Own, Level Up...
                 </p>
             </motion.div>
@@ -118,7 +118,7 @@ const SliderCard = ({ data, isInView, i }) => {
                 <Image src={data.image} alt='main-img' className='z-40 relative' />
                 <Image src={cardCover} alt='card-cover' className='absolute bottom-0 z-0 left-0' />
             </div>
-            <div className='px-4 md:px-14 space-y-4'>
+            <div className='px-4 md:px-14 md:text-start text-center text-white space-y-4'>
                 <h3 className='text-[24px] font-bold font-red-rose uppercase'>{data.title}</h3>
                 <p className='text-[18px] font-red-rose'>{data.desc}</p>
             </div>

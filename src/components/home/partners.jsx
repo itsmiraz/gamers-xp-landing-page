@@ -9,7 +9,7 @@ const Partners = () => {
 
     return (
         <div className="custom-container relative my-20 justify-center">
-            <h2 className='text-[28px] md:text-[54px] font-bold text-center uppercase  font-red-hat-display'>
+            <h2 className='text-[28px] text-white md:text-[54px] font-bold text-center uppercase  font-red-hat-display'>
                 Collaborating with global industry experts
             </h2>
             {/* Slides for Desktop View */}
