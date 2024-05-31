@@ -43,3 +43,24 @@ body {
     @apply px-4 md:px-20 max-w-[1920px] mx-auto  relative z-30 py-20;
   }
 }
+
+.custom-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: white; /* White color for inactive bullets */
+  border-radius: 50%;
+  margin: 0 5px;
+  display: inline-block;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.custom-bullet-active {
+  width: 40px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: #c8f701; /* Green color for active bullet */
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
