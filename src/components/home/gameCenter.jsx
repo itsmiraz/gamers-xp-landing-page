@@ -1,7 +1,5 @@
 import cardCover from '../../../public/assets/images/card-cover.webp'
-import rewardDappImage from '../../../public/assets/images/reward-dapp.webp'
-import giveawayPassImage from '../../../public/assets/images/give-away-pass.webp'
-import esportImage from '../../../public/assets/images/esport-platform.webp'
+
 import Image from 'next/image'
 import ellipsis from '../../../public/assets/images/ellipsis.png'
 // / Import Swiper React components
@@ -19,43 +17,12 @@ import { Pagination, Navigation } from 'swiper/modules';
 import { useRef } from 'react'
 import { useInView, motion } from 'framer-motion'
 import { slideAnimation } from '@/lib/motion'
+import { GameCenterSliderData } from '@/constants';
 
 const GameCenter = () => {
 
 
-    const sliderData = [
 
-        {
-            image: rewardDappImage,
-            title: 'Reward dapp',
-            desc: "Complete in game challenges, earn real rewards"
-        },
-        {
-            image: giveawayPassImage,
-            title: 'Giweaway pass',
-            desc: "Get your chance to win unique prizes! Coming Soon!"
-        },
-        {
-            image: esportImage,
-            title: 'Esport platform',
-            desc: "Compete in esports tournaments and earn real rewards. Coming Soon!"
-        },
-        {
-            image: rewardDappImage,
-            title: 'Reward dapp',
-            desc: "Complete in game challenges, earn real rewards"
-        },
-        {
-            image: giveawayPassImage,
-            title: 'Giweaway pass',
-            desc: "Get your chance to win unique prizes! Coming Soon!"
-        },
-        {
-            image: esportImage,
-            title: 'Esport platform',
-            desc: "Compete in esports tournaments and earn real rewards. Coming Soon!"
-        },
-    ]
     const ref = useRef(null)
     const isInView = useInView(ref)
     return (
@@ -94,7 +61,7 @@ const GameCenter = () => {
                     }}
                     className="mySwiper "
                 >
-                    {sliderData.map((item, i) => (
+                    {GameCenterSliderData.map((item, i) => (
                         <SwiperSlide key={i}>
 
                             <SliderCard isInView={isInView} i={i} data={item} />
