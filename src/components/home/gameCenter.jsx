@@ -16,6 +16,9 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
+import { useRef } from 'react'
+import { useInView, motion } from 'framer-motion'
+import { slideAnimation } from '@/lib/motion'
 
 const GameCenter = () => {
 
@@ -53,24 +56,27 @@ const GameCenter = () => {
             desc: "Compete in esports tournaments and earn real rewards. Coming Soon!"
         },
     ]
-
+    const ref = useRef(null)
+    const isInView = useInView(ref)
     return (
-        <div className='custom-container relative md:my-20 '>
+        <div ref={ref} className='custom-container relative md:my-20 '>
 
-            <div className='relative z-20'>
+            <motion.div
+                initial='initial'
+                animate={isInView ? 'animate' : 'initial'}
+                exit='exit'
+                variants={slideAnimation('down')}
+                className='relative z-20'>
                 <h2 className='font-red-hat-display text-[32px] md:text-[54px] font-bold text-center uppercase'>Next-Level Gaming Center</h2>
                 <p className='text-[14px] md:text-[18px] font-red-rose text-center'>
                     Play, Earn, Own, Level Up...
                 </p>
-            </div>
-            <div className='relative z-20  flex justify-center gap-10 py-32'>
+            </motion.div>
+            <div className='relative z-20  flex justify-center gap-10 '>
                 <Swiper
                     pagination={{
                         dynamicBullets: true,
-
                     }}
-
-
                     modules={[Pagination,]}
                     breakpoints={{
                         640: {
@@ -90,7 +96,8 @@ const GameCenter = () => {
                 >
                     {sliderData.map((item, i) => (
                         <SwiperSlide key={i}>
-                            <SliderCard data={item} />
+
+                            <SliderCard isInView={isInView} i={i} data={item} />
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -105,10 +112,15 @@ const GameCenter = () => {
 export default GameCenter
 
 
-const SliderCard = ({ data }) => {
-    return <div className='relative cursor-pointer flex justify-between flex-col gap-5 max-w-[527px]'>
+const SliderCard = ({ data, isInView, i }) => {
+    return <motion.div
 
-        <div className='relative'>
+        initial={{ opacity: 0, x: 100, }}
+        animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 100, }}
+        transition={{ duration: 0.8, delay: i * 0.4 }}
+        className='relative cursor-pointer flex justify-between flex-col gap-5 max-w-[527px]'>
+
+        <div className='relative pt-32 '>
             <Image src={data.image} alt='main-img' className='z-40 relative' />
             <Image src={cardCover} alt='card-cover' className='absolute bottom-0 z-0 left-0' />
 
@@ -123,5 +135,5 @@ const SliderCard = ({ data }) => {
                 }
             </p>
         </div>
-    </div>
+    </motion.div>
 }
