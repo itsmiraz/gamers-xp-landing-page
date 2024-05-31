@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import heroImage from '../../../public/assets/images/hero-img.webp'
 import secondCharacter from '../../../public/assets/images/second-character.png'
 import ellipsis from '../../../public/assets/images/ellipsis.png'
@@ -6,14 +6,24 @@ import { PrimaryButton, SecondaryButton } from '../ui/buttons/buttons'
 import Balancer from 'react-wrap-balancer'
 import Image from 'next/image'
 import StarIcon from '../../../public/assets/icons/start-icon'
+import { useInView, motion } from 'framer-motion'
+import { slideAnimation } from '@/lib/motion'
 
 
 const Hero = () => {
+
+    const ref = useRef(null)
+    const isInView = useInView(ref)
     return (
-        <div className='custom-container'>
+        <div ref={ref} className='custom-container'>
             <div className='relative  lg:flex-row flex-col-reverse flex gap-10 justify-between items-center '>
 
-                <div className='space-y-12 items-center mx-auto relative'>
+                <motion.div
+                    initial='initial'
+                    animate={isInView ? 'animate' : 'initial'}
+                    exit='exit'
+                    variants={slideAnimation('left')}
+                    className=' space-y-12 lg:mx-0 mx-auto relative'>
                     <h1 className='font-red-hat-display text-[45px] md:text-start text-center md:text-[96px] font-bold leading-[55px] md:leading-[100px] uppercase text-white'>
                         The Gamers <br /> Reward <br /> Platform
                     </h1>
@@ -39,15 +49,20 @@ const Hero = () => {
                     <div className='w-[60px] h-[2px] bg-white'>
 
                     </div>
-                </div>
-                <div className='w-[80%]   relative xl:w-[50%] lg:w-[50%]'>
+                </motion.div>
+                <motion.div
+                    initial='initial'
+                    animate={isInView ? 'animate' : 'initial'}
+                    exit='exit'
+                    variants={slideAnimation('right')}
+                    className='w-[80%]   relative xl:w-[50%] lg:w-[50%]'>
                     <Image src={heroImage} alt='hero-image' />
-                </div>
+                </motion.div>
 
             </div>
             <Image src={ellipsis} alt='ellipsis' className='-top-52 md:-top-80 opacity-20 z-0 -right-32 md:-right-80 w-[952px] absolute' />
             <Image src={ellipsis} alt='ellipsis' className='-bottom-32 md:bottom-0 opacity-30 z-0 -left-52 md:-left-80 w-[1200px] h-[825px]  md:w-[952px] absolute' />
-            {/* <Image src={secondCharacter} alt='ellipsis' className='bottom-0  z-0 -left-52 w-[600px] absolute' /> */}
+            <Image src={secondCharacter} alt='ellipsis' className='bottom-0 lg:block hidden  z-0 -left-52 w-[600px] absolute' />
         </div>
     )
 }

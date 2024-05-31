@@ -5,6 +5,9 @@ import TimerIcon from "../../../public/assets/icons/timer"
 import expertiseImage from '../../../public/assets/images/expertise-image.webp'
 import Image from "next/image"
 import Balancer from "react-wrap-balancer"
+import { useRef } from "react"
+import { useInView, motion } from "framer-motion"
+import { slideAnimation } from "@/lib/motion"
 
 const Expertise = () => {
 
@@ -25,18 +28,28 @@ const Expertise = () => {
             desc: "Lorem vitae amet aliquam odio diam sit amet vestibulum. Malesuada amet eu porttitor ac. Libero viverra at pulvinar."
         },
     ]
-
+    const ref = useRef(null)
+    const isInView = useInView(ref)
     return (
-        <div className='custom-container  grid grid-cols-1 lg:grid-cols-2 gap-20 place-items-center  '>
+        <div ref={ref} className='custom-container  grid grid-cols-1 lg:grid-cols-2 gap-20 place-items-center  '>
 
 
-            <div>
+            <motion.div
+                initial='initial'
+                animate={isInView ? 'animate' : 'initial'}
+                exit='exit'
+                variants={slideAnimation('left')}
+            >
                 <Image src={expertiseImage} alt="expertise-image-icon" />
-            </div>
+            </motion.div>
             <div>
                 <ul className="space-y-12">
                     {
-                        expertiseData.map((item, i) => <li className="flex gap-x-6 md:gap-x-8" key={i}>
+                        expertiseData.map((item, i) => <motion.li
+                            initial={{ opacity: 0, x: 100, y: 50 }}
+                            animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 100, y: isInView ? 0 : 50 }}
+                            transition={{ duration: 0.2, delay: i * 0.2 }}
+                            className="flex gap-x-6 md:gap-x-8" key={i}>
                             <div>
                                 {item.icon}
                             </div>
@@ -46,7 +59,7 @@ const Expertise = () => {
                                     {item.desc}</Balancer></p>
                             </div>
 
-                        </li>)
+                        </motion.li>)
                     }
                 </ul>
 
