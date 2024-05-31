@@ -19,7 +19,7 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className='md:col-span-1 col-span-3'>
-                    <h3 className='font-red-rose  uppercase font-bold text-[20px]'>Support</h3>
+                    <h3 className='font-red-rose text-white uppercase font-bold text-[20px]'>Support</h3>
                     <ul className='pt-12 space-y-2 md:space-y-6'>
                         <li>
                             <p className='font-red-rose text-[18px] text-white/70'>Volutpat</p>
@@ -33,7 +33,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className='md:col-span-1 col-span-3'>
-                    <h3 className='font-red-rose uppercase font-bold text-[20px]'>legal</h3>
+                    <h3 className='font-red-rose text-white uppercase font-bold text-[20px]'>legal</h3>
                     <ul className='pt-12 space-y-2 md:space-y-6'>
                         <li>
                             <p className='font-red-rose text-[18px] text-white/70'>Turpis</p>
@@ -47,7 +47,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className='md:col-span-1 col-span-6'>
-                    <h3 className='font-red-rose font-bold uppercase text-[20px]'>for partners</h3>
+                    <h3 className='font-red-rose text-white font-bold uppercase text-[20px]'>for partners</h3>
                     <ul className='pt-12 space-y-2 md:space-y-6'>
                         <li>
                             <p className='font-red-rose text-[18px] text-white/70'>Neque urna</p>
