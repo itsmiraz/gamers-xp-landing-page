@@ -4,10 +4,12 @@ import GameCenter from "@/components/home/gameCenter";
 import Hero from "@/components/home/hero";
 import Partners from "@/components/home/partners";
 import Head from "next/head";
+import Blob1 from "../../public/assets/icons/blob-1";
+import Blob2 from "../../public/assets/icons/blob-2";
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative ">
       <Head>
         <title>
           The Gamers Reward Platform - Play PC Games with No Downloads and Earn
@@ -27,6 +29,13 @@ export default function Home() {
       <GameCenter />
       <Feature />
       <Partners />
+
+      {/* <div className="absolute top-0 -right-[250px]">
+        <Blob1 />
+      </div>
+      <div className="absolute top-40  -right-[250px]">
+        <Blob2 />
+      </div> */}
     </main>
   );
 }
