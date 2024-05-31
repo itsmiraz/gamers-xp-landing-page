@@ -49,6 +49,11 @@ export const GameCenterSliderData = [
     desc: "Get your chance to win unique prizes! Coming Soon!",
   },
   {
+    image: giveawayPassImage,
+    title: "GamersXP LevelUP",
+    desc: "Get your chance to win unique prizes! Coming Soon!",
+  },
+  {
     image: esportImage,
     title: "Esport platform",
     desc: "Compete in esports tournaments and earn real rewards. Coming Soon!",
