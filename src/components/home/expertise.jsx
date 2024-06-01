@@ -8,11 +8,14 @@ import { useInView, motion } from "framer-motion"
 import { slideAnimation } from "@/lib/motion"
 import { expertiseData } from "@/constants"
 
-const Expertise = () => {
+const Expertise = ({ }) => {
 
 
     const ref = useRef(null)
     const isInView = useInView(ref)
+
+
+
     return (
         <div ref={ref} className='custom-container  grid grid-cols-1 lg:grid-cols-2 gap-20 place-items-center  '>
 

@@ -6,8 +6,14 @@ import Partners from "@/components/home/partners";
 import Head from "next/head";
 import Blob1 from "../../public/assets/icons/blob-1";
 import Blob2 from "../../public/assets/icons/blob-2";
-
+import { motion, useScroll, useTransform } from "framer-motion";
 export default function Home() {
+  const { scrollYProgress } = useScroll();
+  // const [startFadeIn, setStartFadeIn] = useState(false);
+
+  const rotateBlob1 = useTransform(scrollYProgress, [0, 1], [0, 90]);
+  const rotateBlob2 = useTransform(scrollYProgress, [0, 1], [0, -90]);
+
   return (
     <main className="relative ">
       <Head>
@@ -30,12 +36,20 @@ export default function Home() {
       <Feature />
       <Partners />
 
-      {/* <div className="absolute top-0 -right-[250px]">
+      <motion.div
+        className="fixed  opacity-60 -z-10 top-20 -right-[550px]"
+        style={{ rotate: rotateBlob1 }}
+        transition={{ ease: "easeInOut", duration: 4 }}
+      >
         <Blob1 />
-      </div>
-      <div className="absolute top-40  -right-[250px]">
+      </motion.div>
+      <motion.div
+        className="fixed opacity-60  -z-10 top-96 -right-[550px]"
+        style={{ rotate: rotateBlob2 }}
+        transition={{ ease: "easeInOut", duration: 4 }}
+      >
         <Blob2 />
-      </div> */}
+      </motion.div>
     </main>
   );
 }
