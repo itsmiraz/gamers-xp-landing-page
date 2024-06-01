@@ -16,7 +16,7 @@ const Hero = () => {
     const isInView = useInView(ref)
     return (
         <div ref={ref} className='custom-container'>
-            <div className='relative  lg:flex-row flex-col-reverse flex gap-10 justify-between items-center '>
+            <div className='relative pt-20  lg:flex-row flex-col-reverse flex gap-10 justify-between items-center '>
 
                 <motion.div
                     initial='initial'
