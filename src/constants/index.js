@@ -18,6 +18,7 @@ import image9 from "../../public/assets/images/partners/image-9.png";
 import image10 from "../../public/assets/images/partners/image-10.png";
 import image11 from "../../public/assets/images/partners/image-11.png";
 import image12 from "../../public/assets/images/partners/image-12.png";
+import RegisterIcon from "../../public/assets/icons/register";
 
 export const expertiseData = [
   {
@@ -102,4 +103,154 @@ export const PartnersSlide2 = [
   image10,
   image11,
   image12,
+];
+
+export const Navmenus = [
+  {
+    title: "Gamers XPReward",
+    link: "/",
+    subMenus: [
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 1",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 2",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 3",
+        link: "/",
+      },
+    ],
+  },
+  {
+    title: "Gamers XPBox",
+    link: "/",
+    subMenus: [
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 1",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 2",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 3",
+        link: "/",
+      },
+    ],
+  },
+  {
+    title: "Gamers XPLevelUp ",
+    link: "/",
+    subMenus: [
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 1",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 2",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 3",
+        link: "/",
+      },
+    ],
+  },
+  {
+    title: "Gamers XPeSports",
+    link: "/",
+    subMenus: [
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 1",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 2",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 3",
+        link: "/",
+      },
+    ],
+  },
+  {
+    title: "Gamers XPCard",
+    link: "/",
+    subMenus: [
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 1",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 2",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 3",
+        link: "/",
+      },
+    ],
+  },
+  {
+    title: "Gamers XPID",
+    link: "/",
+    subMenus: [
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 1",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 2",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 3",
+        link: "/",
+      },
+    ],
+  },
+  {
+    title: "Gamers XPGiveaways pass",
+    link: "/",
+    subMenus: [
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 1",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 2",
+        link: "/",
+      },
+      {
+        icon: <RegisterIcon />,
+        title: "Sub Menu 3",
+        link: "/",
+      },
+    ],
+  },
 ];
