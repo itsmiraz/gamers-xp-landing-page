@@ -16,7 +16,7 @@ const Header = () => {
 
 
     return (
-        <div className='z-50 relative max-w-[1920px] mx-auto flex justify-between items-center py-4 px-4 md:px-10' >
+        <div className='z-50 sticky top-0  max-w-[1920px] mx-auto flex justify-between items-center py-4 px-4 md:px-10' >
 
             <div className='z-50 relative '>
                 <Image className='md:w-[180px] w-[150px] lg:w-[289px]' src={logo} alt='game-xp-logo' />
@@ -76,7 +76,7 @@ const NavMenu = ({ item, i, ShowSubMenu, setShowSubMenu }) => {
             animate={{ scale: ShowSubMenu === i ? 1 : 0, opacity: ShowSubMenu === i ? 1 : 0 }}
             exit={{ scale: 0, opacity: 0 }}
             transition={{ duration: 0.1 }}
-            className='w-[550px] hidden md:flex justify-between items-start gap-x-10 border px-4 py-4 -left-52 absolute h-fit -bottom-80 text-white bg-black/20 backdrop-blur-xl border-white/20 rounded-xl '>
+            className={`${ShowSubMenu === i ? 'block' : "hidden"} overflow-hidden w-full mt-4 lg:w-[550px] flex justify-between  items-start gap-x-10 border lg:px-4 py-2 px-2 lg:py-4 lg:-left-52 relative lg:absolute h-fit lg:-bottom-80 text-white bg-black/20 backdrop-blur-xl border-white/20 rounded-xl `}>
             <div className=' space-y-4'>
                 {
                     item.subMenus.map((subMenu, i) => <div className='cursor-pointer flex items-center gap-x-2' key={i}>
@@ -86,7 +86,7 @@ const NavMenu = ({ item, i, ShowSubMenu, setShowSubMenu }) => {
 
 
                         <Link href={subMenu.link}>
-                            <p className='font-red-hat-display  font-medium text-xl' key={i}>{subMenu.title}</p></Link>
+                            <p className='font-red-hat-display  font-medium text-sm lg:text-xl' key={i}>{subMenu.title}</p></Link>
                     </div>)
                 }
             </div>
@@ -94,7 +94,7 @@ const NavMenu = ({ item, i, ShowSubMenu, setShowSubMenu }) => {
 
             {/* Ticker  */}
             <div className='flex gap-x-2 items-center'>
-                <div className="relative z-50  overflow-hidden w-full h-64"> {/* Set a fixed height */}
+                <div className="relative z-50 lg:block hidden  overflow-hidden w-full h-64">
                     <motion.div
                         className="flex flex-col gap-y-2 items-center"
                         animate={{ y: ['0%', '-100%'] }} // Animate vertically

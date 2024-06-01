@@ -100,7 +100,7 @@ const GameCenter = () => {
             <Image
                 src={ellipsis}
                 alt='ellipsis'
-                className='absolute w-[600px] h-[800px] md:w-[915px] md:h-[915px]  z-0 -top-64 md:-top-44 opacity-20 -right-40 md:-right-72'
+                className='absolute w-[600px] h-[800px] md:w-[915px] md:h-[915px]  z-0 -top-64 md:-top-44 opacity-40 -right-40 md:-right-72'
             />
         </div>
     );

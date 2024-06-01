@@ -60,8 +60,8 @@ const Hero = () => {
                 </motion.div>
 
             </div>
-            <Image src={ellipsis} alt='ellipsis' className='-top-52 md:-top-80 opacity-20 z-0 -right-32 md:-right-80 w-[952px] absolute' />
-            <Image src={ellipsis} alt='ellipsis' className='-bottom-32 md:bottom-0 opacity-30 z-0 -left-52 md:-left-80 w-[1200px] h-[825px]  md:w-[952px] absolute' />
+            <Image src={ellipsis} alt='ellipsis' className='-top-52 md:-top-80 opacity-30 z-0 -right-32 md:-right-80 w-[952px] absolute' />
+            <Image src={ellipsis} alt='ellipsis' className='-bottom-52 md:-bottom-40 opacity-60 z-0 -left-52 md:-left-80 w-[1400px] h-[1000px]  md:w-[1000px] absolute' />
             <Image src={secondCharacter} alt='ellipsis' className='bottom-0 lg:block hidden  z-0 -left-52 w-[600px] absolute' />
         </div>
     )
