@@ -21,7 +21,7 @@ const Header = () => {
             <div className='z-50 relative '>
                 <Image className='md:w-[180px] w-[150px] lg:w-[289px]' src={logo} alt='game-xp-logo' />
             </div>
-            <ul className={` lg:static overflow-y-auto max-h-screen absolute ${!Open ? "top-0" : "-top-[1000px]"} left-0 px-4 md:px-10 lg:px-0 justify-start bg-black lg:bg-transparent w-full lg:w-fit ease-in-out transition-all duration-300  pt-20 lg:pt-0 pb-10 lg:pb-0 z-40  lg:flex lg:space-y-0 space-y-4  gap-x-4 `}>
+            <ul className={` lg:static overflow-y-visible max-h-screen absolute ${!Open ? "top-0" : "-top-[1000px]"} left-0 px-4 md:px-10 lg:px-0 justify-start bg-black lg:bg-transparent w-full lg:w-fit ease-in-out transition-all duration-300  pt-20 lg:pt-0 pb-10 lg:pb-0 z-40  lg:flex lg:space-y-0 space-y-4  gap-x-4 `}>
                 {
                     Navmenus.map((item, i) => <NavMenu ShowSubMenu={ShowSubMenu} setShowSubMenu={setShowSubMenu} item={item} key={i} i={i} />)
                 }
