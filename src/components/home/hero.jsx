@@ -16,16 +16,16 @@ const Hero = () => {
     const isInView = useInView(ref)
     return (
         <div ref={ref} className='custom-container'>
-            <div className='relative pt-20  lg:flex-row flex-col-reverse flex gap-10 justify-between items-center '>
+            <div className='relative pt-6 md:pt-20  lg:flex-row flex-col-reverse flex gap-2 md:gap-10 justify-between items-center '>
 
                 <motion.div
                     initial='initial'
                     animate={isInView ? 'animate' : 'initial'}
                     exit='exit'
                     variants={slideAnimation('left')}
-                    className=' space-y-12 lg:mx-0 mx-auto z-30 relative'>
-                    <h1 className='font-red-hat-display text-[45px] md:text-start text-center md:text-[96px] font-bold leading-[55px] md:leading-[100px] uppercase text-white'>
-                        The Gamers <br /> Reward <br /> Platform
+                    className='space-y-6 md:space-y-12 lg:mx-0 mx-auto z-30 relative'>
+                    <h1 className='font-red-hat-display text-[32px] md:text-start text-center md:text-[96px] font-bold leading-[45px] md:leading-[100px] uppercase text-white'>
+                        The Gamers <br className='md:block hidden' /> Reward <br className='md:block hidden' /> Platform
                     </h1>
                     <div className='flex md:justify-start justify-center gap-x-5'>
                         <SecondaryButton>Run PC games</SecondaryButton>
