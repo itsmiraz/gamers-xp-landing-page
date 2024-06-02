@@ -21,7 +21,7 @@ const Header = () => {
             <div className='z-50 relative '>
                 <Image className='md:w-[180px] w-[150px] lg:w-[289px]' src={logo} alt='game-xp-logo' />
             </div>
-            <ul className={` lg:static overflow-y-auto max-h-screen absolute ${!Open ? "top-0" : "-top-[1000px]"} left-0 px-4 md:px-10 lg:px-0 justify-start bg-black lg:bg-transparent w-full lg:w-fit ease-in-out transition-all duration-300  pt-20 lg:pt-0 pb-10 lg:pb-0 z-40  lg:flex lg:space-y-0 space-y-4  gap-x-4 `}>
+            <ul className={` lg:static overflow-y-auto lg:overflow-y-visible  md:space-y-0 space-y-5 max-h-screen  absolute ${!Open ? "top-0" : "-top-[1000px]"} left-0 px-4 md:px-10 lg:px-0 justify-start bg-black lg:bg-transparent w-full lg:w-fit ease-in-out transition-all duration-300  pt-20 lg:pt-0 pb-10 lg:pb-0 z-40  lg:flex lg:space-y-0 space-y-4  gap-x-4 `}>
                 {
                     Navmenus.map((item, i) => <NavMenu ShowSubMenu={ShowSubMenu} setShowSubMenu={setShowSubMenu} item={item} key={i} i={i} />)
                 }
@@ -58,7 +58,7 @@ const NavMenu = ({ item, i, ShowSubMenu, setShowSubMenu }) => {
         SubmenuSlideImage1,
         SubmenuSlideImage1,
     ]
-    return <li className='relative' key={i}>
+    return <li className='relative transition-all ease-in-out duration-300' key={i}>
         <div onMouseEnter={() => setShowSubMenu(i)}
             onClick={() => setShowSubMenu(ShowSubMenu === i ? -1 : i)}
             className='flex  cursor-pointer relative flex-col text-center items-center lg:justify-center lg:items-center'>
@@ -70,12 +70,12 @@ const NavMenu = ({ item, i, ShowSubMenu, setShowSubMenu }) => {
 
 
 
-        <motion.div
+        <div
             onMouseLeave={() => setShowSubMenu(-1)}
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: ShowSubMenu === i ? 1 : 0, opacity: ShowSubMenu === i ? 1 : 0 }}
-            exit={{ scale: 0, opacity: 0 }}
-            transition={{ duration: 0.1 }}
+            // initial={{ scale: 0, opacity: 0 }}
+            // animate={{ scale: ShowSubMenu === i ? 1 : 0, opacity: ShowSubMenu === i ? 1 : 0 }}
+            // exit={{ scale: 0, opacity: 0 }}
+            // transition={{ duration: 0.1 }}
             className={`${ShowSubMenu === i ? 'block' : "hidden"} overflow-hidden w-full mt-4 lg:w-[550px] flex justify-between  items-start gap-x-10 border lg:px-4 py-2 px-2 lg:py-4 lg:-left-52 relative lg:absolute h-fit lg:-bottom-80 text-white bg-black/20 backdrop-blur-xl border-white/20 rounded-xl `}>
             <div className=' space-y-4'>
                 {
@@ -159,6 +159,6 @@ const NavMenu = ({ item, i, ShowSubMenu, setShowSubMenu }) => {
                 </div>
             </div>
 
-        </motion.div>
+        </div>
     </li>
 }
