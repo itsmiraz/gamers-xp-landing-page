@@ -13,7 +13,8 @@ const Partners = () => {
                 Collaborating with global industry experts
             </h2>
             {/* Slides for Desktop View */}
-            <div className='md:hidden lg:block hidden'>
+            <div className='hidden lg:block '>
+                <p>DeskTop</p>
                 <div className="relative  z-50 mb-12 mt-20 overflow-hidden whitespace-nowrap w-full">
                     <motion.div
                         className="flex gap-x-20 items-center"
@@ -29,7 +30,7 @@ const Partners = () => {
 
                     </motion.div>
                 </div>
-                <div className="relative h-full z-50 overflow-hidden whitespace-nowrap w-full">
+                <div className="relative  z-50 overflow-hidden whitespace-nowrap w-full">
                     <motion.div
                         className="flex gap-x-20 items-center"
                         animate={{ x: ['-50%', '0%'] }}
@@ -47,6 +48,8 @@ const Partners = () => {
             </div>
             {/* Slides for Tablet View */}
             <div className='hidden md:block lg:hidden'>
+                <p>Tablet</p>
+
                 <div className="relative  z-50 mb-12 mt-20 overflow-hidden whitespace-nowrap w-full">
                     <motion.div
                         className="flex gap-x-10 items-center"
@@ -79,7 +82,8 @@ const Partners = () => {
                 </div>
             </div>
             {/* Slides for Mobile View */}
-            <div className='block lg:hidden md:hidden'>
+            <div className='block md:hidden'>
+                <p>Phone</p>
                 <div className="relative  z-50 mb-12 mt-20 overflow-hidden whitespace-nowrap w-full">
                     <motion.div
                         className="flex gap-x-10 items-center"
@@ -111,7 +115,7 @@ const Partners = () => {
                     </motion.div>
                 </div>
             </div>
-            <Image src={ellipsis} alt='ellipsis' className='absolute w-[1000px] z-0 -bottom-[300px] md:-bottom-[700px] opacity-20 -right-20' />
+            <Image src={ellipsis} alt='ellipsis' className='absolute w-[1000px] z-0 -bottom-[300px] md:-bottom-[700px] opacity-40 -right-20' />
 
         </div>
     )

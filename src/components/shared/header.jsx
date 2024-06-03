@@ -16,7 +16,7 @@ const Header = () => {
 
 
     return (
-        <div className='z-50 fixed w-[100%]  bg-black top-0 left-1/2 transform -translate-x-1/2 max-w-[1920px] mx-auto flex justify-between items-center py-4 px-4 md:px-10' >
+        <div className='z-50 fixed w-[100%]  bg-black top-0 left-1/2 transform -translate-x-1/2 max-w-[2920px] mx-auto flex justify-between items-center py-4 px-4 md:px-10' >
 
             <div className='z-50 relative '>
                 <Image className='md:w-[180px] w-[150px] lg:w-[289px]' src={logo} alt='game-xp-logo' />
