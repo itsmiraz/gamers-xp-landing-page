@@ -13,10 +13,10 @@ import { slideAnimation } from '@/lib/motion'
 const Hero = () => {
 
     const ref = useRef(null)
-    const isInView = useInView(ref)
+    const isInView = useInView(ref, { once: true })
     return (
-        <div ref={ref} className='custom-container'>
-            <div className='relative pt-6 md:pt-20  lg:flex-row flex-col-reverse flex gap-2 md:gap-10 justify-between items-center '>
+        <div ref={ref} className='custom-container h-full relative '>
+            <div className='relative mt-6 md:mt-20  lg:flex-row flex-col-reverse flex gap-2 md:gap-10 justify-between items-center '>
 
                 <motion.div
                     initial='initial'
@@ -53,15 +53,15 @@ const Hero = () => {
                 <motion.div
                     initial='initial'
                     animate={isInView ? 'animate' : 'initial'}
-                    exit='exit'
+                    // exit='exit'
                     variants={slideAnimation('right')}
                     className='w-[80%]   relative xl:w-[50%] lg:w-[50%]'>
                     <Image src={heroImage} alt='hero-image' />
                 </motion.div>
 
             </div>
-            <Image src={ellipsis} alt='ellipsis' className='-top-52 md:-top-80 opacity-30 z-0 -right-32 md:-right-80 w-[952px] absolute' />
-            <Image src={ellipsis} alt='ellipsis' className='-bottom-52 md:-bottom-40 opacity-60 z-0 -left-52 md:-left-80 w-[1400px] h-[1000px]  md:w-[1000px] absolute' />
+            {/* <Image src={ellipsis} alt='ellipsis' className='-top-52 md:-top-80 opacity-30 z-0 -right-32 md:-right-80 w-[952px] absolute' /> */}
+            {/* <Image src={ellipsis} alt='ellipsis' className='-bottom-52 md:-bottom-40 opacity-60 z-0 -left-52 md:-left-80 w-[1400px] h-[1000px]  md:w-[1000px] absolute' /> */}
             <Image src={secondCharacter} alt='ellipsis' className='bottom-0 lg:block hidden  z-0 -left-52 w-[600px] absolute' />
         </div>
     )

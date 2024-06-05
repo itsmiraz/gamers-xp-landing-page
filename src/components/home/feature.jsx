@@ -57,7 +57,7 @@ const Feature = () => {
                 </video>
 
             </motion.div>
-            <Image src={ellipsis} alt='ellipsis' className='absolute w-[1000px] h-[700px] md:h-fit z-0 -bottom-0 md:-bottom-72 opacity-30 -left-32 md:-left-96' />
+            {/* <Image src={ellipsis} alt='ellipsis' className='absolute w-[1000px] h-[700px] md:h-fit z-0 -bottom-0 md:-bottom-72 opacity-30 -left-32 md:-left-96' /> */}
 
         </div>
     )

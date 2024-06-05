@@ -7,7 +7,7 @@ import Linkedin from '../../../public/assets/icons/linkedin'
 
 const Footer = () => {
     return (
-        <div className='z-50 pt-12  relative max-w-[1920px] mx-auto px-4 md:px-20 bg-black ' >
+        <div className='z-50 pt-12  relative max-w-[2220px] mx-auto px-4 md:px-20 bg-black ' >
 
             <div className='grid grid-cols-6 gap-10'>
                 <div className='col-span-6 md:col-span-3 '>
