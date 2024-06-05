@@ -10,8 +10,7 @@ import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import ellipsis from "../../public/assets/images/ellipsis.png";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import SmoothScroll from "@/components/ui/SmoothScroll";
+import { useEffect, useState } from "react";
 import Header from "@/components/shared/header";
 import Footer from "@/components/shared/footer";
 export default function Home() {
@@ -42,12 +41,17 @@ export default function Home() {
   const x = useTransform(
     springYProgress,
     [0, 0.25, 0.5, 1],
-    [400, -windowDimensions.width + 100, windowDimensions.width - 800, 0]
+    [
+      100,
+      -(windowDimensions.width / 2) + 50,
+      windowDimensions.width / 2 - 400,
+      0,
+    ]
   );
   const y = useTransform(
     springYProgress,
     [0, 0.25, 0.5, 1],
-    [-400, -300, 200, windowDimensions.height - 900]
+    [-200, -100, 100, windowDimensions.height - 600]
   );
 
   const rotateBlob1 = useTransform(scrollYProgress, [0, 1], [0, 90]);
@@ -92,6 +96,8 @@ export default function Home() {
         <Image
           src={ellipsis}
           alt="ellipsis"
+          width={1200}
+          height={1200}
           className="w-[1000px] opacity-50 mx-auto"
         />
       </motion.div>
