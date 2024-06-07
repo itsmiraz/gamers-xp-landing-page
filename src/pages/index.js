@@ -8,6 +8,7 @@ import Blob1 from "../../public/assets/icons/blob-1";
 import Blob2 from "../../public/assets/icons/blob-2";
 import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import ellipsis from "../../public/assets/images/ellipsis.png";
+import Newellipsis from "../../public/assets/images/new ellipsis.png";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -15,48 +16,15 @@ import Header from "@/components/shared/header";
 import Footer from "@/components/shared/footer";
 export default function Home() {
   const { scrollYProgress } = useScroll();
-  // Adjust these values for a slower response
   const springConfig = {
-    stiffness: 40,
-    damping: 100,
+    stiffness: 100,
+    damping: 20,
     mass: 1,
   };
-
-  const springYProgress = useSpring(scrollYProgress, springConfig);
-
-  const [windowDimensions, setWindowDimensions] = useState({
-    width: 0,
-    height: 0,
-  });
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setWindowDimensions({
-        width: window?.innerWidth,
-        height: window?.innerHeight,
-      });
-    }
-  }, []);
-
-  const x = useTransform(
-    springYProgress,
-    [0, 0.25, 0.5, 1],
-    [
-      100,
-      -(windowDimensions.width / 2) + 50,
-      windowDimensions.width / 2 - 400,
-      0,
-    ]
-  );
-  const y = useTransform(
-    springYProgress,
-    [0, 0.25, 0.5, 1],
-    [-200, -100, 100, windowDimensions.height - 600]
-  );
-
   const rotateBlob1 = useTransform(scrollYProgress, [0, 1], [0, 90]);
   const rotateBlob2 = useTransform(scrollYProgress, [0, 1], [0, -90]);
-
+  const rotateEllipsis = useTransform(scrollYProgress, [0, 1], [0, -360]);
+  const springRotateEllipsis = useSpring(rotateEllipsis, springConfig);
   return (
     <main>
       <Head>
@@ -81,25 +49,10 @@ export default function Home() {
       <Partners />
       <Footer />
       <motion.div
-        style={{
-          x,
-          y,
-          position: "fixed",
-          top: 100,
-          right: 100,
-          animationDuration: 12,
-          animationDelay: 12,
-          transition: "all",
-        }}
-        transition={{ duration: 20, ease: "easeInOut" }}
+        style={{ rotate: springRotateEllipsis }}
+        className="fixed md:w-[2300px] w-[1200px] -top-[300px] md:-top-[900px] z-[-100] -right-[500px]  md:-right-[550px] opacity-50 mx-auto"
       >
-        <Image
-          src={ellipsis}
-          alt="ellipsis"
-          width={1200}
-          height={1200}
-          className="w-[1000px] opacity-50 mx-auto"
-        />
+        <Image src={Newellipsis} alt="ellipsis" />
       </motion.div>
       <motion.div
         className="fixed  opacity-60 -z-10 top-20 -right-[550px]"
@@ -118,3 +71,45 @@ export default function Home() {
     </main>
   );
 }
+
+// // Adjust these values for a slower response
+// const springConfig = {
+//   stiffness: 40,
+//   damping: 100,
+//   mass: 1,
+// };
+
+// const springYProgress = useSpring(scrollYProgress, springConfig);
+
+// const [windowDimensions, setWindowDimensions] = useState({
+//   width: 0,
+//   height: 0,
+// });
+
+// useEffect(() => {
+//   if (typeof window !== "undefined") {
+//     setWindowDimensions({
+//       width: window?.innerWidth,
+//       height: window?.innerHeight,
+//     });
+//   }
+// }, []);
+
+// const x = useTransform(
+//   springYProgress,
+//   [0, 0.25, 0.5, 1, 0],
+//   [400, -1200, 400, -1200, 400]
+// );
+// const y = useTransform(
+//   springYProgress,
+//   [0, 0.25, 0.5, 1, 0],
+//   [-400, 0, 0, -100, 400]
+// );
+
+// // top right - (x = 400 , y = -400),
+// // left bottom - (x =  -1200, y = 0),
+// // top right - ( x= 400 , y = 0)
+// // left  middle  - ( x= -1200 , y = -100)
+// // bottom  rifht  - ( x= 400 , y = 400)
+
+// console.log(x, y);
